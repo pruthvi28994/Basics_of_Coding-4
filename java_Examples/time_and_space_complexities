@@ -1,0 +1,63 @@
+while designing the algorithm we need to give a thought to
+1--> time complexities 
+		time required to completed the program
+		a) operation count--> no of times program gets execute
+		b) step count --> total operation performed at every single step of program
+2--> space complexities
+		memory required by the program
+		a) Instruction space
+		b) Data Space
+		c) Environment stack space (space consumed during function call)
+		
+		
+Types of Algorithm Analysis
+
+A) posteriori analysis :is done after implementation of alorithm in a programming lanuage
+B) priori analysis is carried out before the program is written 
+
+problem size depends on the nature of the problem
+order of magnitude of algorithm
+for( i=0;i<5;i++){
+ 			//'c' statements
+ 			//each statement are executed once
+}
+		a) order of above code :N*c c->constant
+		
+Analysis based on the nature of the problem
+	1) Worst case Analysis
+	2) Best case Analysis
+	3) Average case Analysis
+	
+	
+Asymptotic Analysis
+  how much more time does a problem of twice the take?
+  A) Big -O notation
+  B) Omega Notation
+  
+  a) Big-O
+		used for worst case analysis with an assumption that c and n0 are positive where n0 represent 
+		the threshold problem size and n is the current problem size
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
