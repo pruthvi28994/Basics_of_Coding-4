@@ -1,4 +1,5 @@
-package java_Examples;
+package com.pruthvi.java.interviewQuestion;
+
 import java.util.*;
 
 /*
@@ -46,7 +47,8 @@ public class java_MergeAndSortList {
 			else
 				throw new IllegalArgumentException();
 		}
-		System.out.println("After mergining and sorting the list(2,6,8) indexed position\n" + mergeAndSort(list1, list2));
+		System.out
+				.println("After mergining and sorting the list(2,6,8) indexed position\n" + mergeAndSort(list1, list2));
 	}
 
 	public static List<Integer> mergeAndSort(List<Integer> al1, List<Integer> al2) {

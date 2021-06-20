@@ -8,39 +8,38 @@ import java.util.*;
 public class java_StringtoDate {
 
 	public static void main(String[] args) {
-		Date date=new Date();
+		Date date = new Date();
 		System.out.println(date);
-		
-		//formatchange
-		DateFormat df=DateFormat.getDateInstance();
+
+		// formatchange
+		DateFormat df = DateFormat.getDateInstance();
 		System.out.println(df.format(date));
-		
-		df=DateFormat.getDateTimeInstance();
+
+		df = DateFormat.getDateTimeInstance();
 		System.out.println(df.format(date));
-		
-		df=DateFormat.getDateInstance(DateFormat.LONG);
-		System.out.println("Long Format=>"+df.format(date));
-		
-		df=DateFormat.getDateInstance(DateFormat.SHORT);
+
+		df = DateFormat.getDateInstance(DateFormat.LONG);
+		System.out.println("Long Format=>" + df.format(date));
+
+		df = DateFormat.getDateInstance(DateFormat.SHORT);
 		System.out.println(df.format(date));
-		
-		df=DateFormat.getDateInstance(DateFormat.MEDIUM);
+
+		df = DateFormat.getDateInstance(DateFormat.MEDIUM);
 		System.out.println(df.format(date));
-		
-		df=DateFormat.getDateInstance(DateFormat.FULL);
-		System.out.println(df.format(date)+"\n");
-		
-		
-		//simpledate format for printing the date in specified format
-		SimpleDateFormat sdf=new SimpleDateFormat("dd-MMMM-yyyy");
+
+		df = DateFormat.getDateInstance(DateFormat.FULL);
+		System.out.println(df.format(date) + "\n");
+
+		// simpledate format for printing the date in specified format
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-yyyy");
 		sdf.setLenient(false);
 		System.out.println(sdf.format(date));
-		
+
 		System.out.println("Enter the date of birth in DD-MM-YYYY format:");
-		Scanner sc=new Scanner(System.in);
-		String input=sc.nextLine();
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
 		try {
-			date=sdf.parse(input);
+			date = sdf.parse(input);
 			System.out.println(date);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

@@ -1,53 +1,53 @@
-package java_Examples;
+package com.pruthvi.java.interviewQuestion;
 
 import java.util.Scanner;
 
 public class java_Queue {
-	public int rear=-1;
-	public int front=-1;
+	public int rear = -1;
+	public int front = -1;
 	public int maxsize;
-	public int[] Q=new int[10000];
-	//queue-->FIFO
-	//insertion at rear and deletion at front end
+	public int[] Q = new int[10000];
+
+	// queue-->FIFO
+	// insertion at rear and deletion at front end
 	public java_Queue() {
-		rear=0;
-		front=0;
+		rear = 0;
+		front = 0;
 	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		java_Queue queue=new java_Queue();
-		Scanner sc=new Scanner(System.in);
+		java_Queue queue = new java_Queue();
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Size of the queue");
-		queue.maxsize=sc.nextInt();
-		int Q[]=new int[queue.maxsize];
+		queue.maxsize = sc.nextInt();
+		int Q[] = new int[queue.maxsize];
 		System.out.println();
 		System.out.println("Enter the elements:");
-		
-		for(int i=0;i<=queue.maxsize;i++) {
+
+		for (int i = 0; i <= queue.maxsize; i++) {
 			queue.insert(sc.nextInt());
 		}
-		for(int i=0;i<=queue.maxsize;i++) {
+		for (int i = 0; i <= queue.maxsize; i++) {
 			queue.delete();
 		}
 		System.out.println(Q[1]);
 	}
+
 	void insert(int element) {
 		// TODO Auto-generated method stub
-		if(rear==maxsize) {
+		if (rear == maxsize) {
 			System.out.println("Queue is full");
-		}
-		else {
-			Q[rear++]=element;
+		} else {
+			Q[rear++] = element;
 		}
 	}
-	
-	
+
 	void delete() {
-		if(front==rear) {
+		if (front == rear) {
 			System.out.println("Queue is Empty");
-		}
-		else{
-			System.out.println("deleted element is =>"+Q[front++]);
+		} else {
+			System.out.println("deleted element is =>" + Q[front++]);
 		}
 	}
 

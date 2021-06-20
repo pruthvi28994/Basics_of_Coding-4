@@ -1,4 +1,4 @@
-package java_Examples;
+package com.pruthvi.java.interviewQuestion;
 
 /*
  * Complete the main method to Accept n numbers and display the numbers in ascending order as output 
@@ -8,32 +8,32 @@ package java_Examples;
  * 
  * */
 import java.util.*;
+
 public class java_OddEvenSort {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int num=sc.nextInt();
-        if(num>1 && num<=20){
-            Integer arr[]=new Integer[num];
-            for(int i=0;i<num;i++){
-                arr[i]=sc.nextInt();
-            }
-            int temp;
-            if(num%2==0){
-                Arrays.sort(arr);
-                for(int i=0;i<num-1;i++){
-                    System.out.print(arr[i]+" ");
-              }
-            System.out.print(arr[num-1]);
-            }
-            else{
-                Arrays.sort(arr, Collections.reverseOrder());
-                for(int i=0;i<num-1;i++){
-                    System.out.print(arr[i]+" ");
-                }
-                System.out.print(arr[num-1]);
-            }
-        }else{
-            System.out.println("INVALID_INPUT");
-        }
-    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		if (num > 1 && num <= 20) {
+			Integer arr[] = new Integer[num];
+			for (int i = 0; i < num; i++) {
+				arr[i] = sc.nextInt();
+			}
+			int temp;
+			if (num % 2 == 0) {
+				Arrays.sort(arr);
+				for (int i = 0; i < num - 1; i++) {
+					System.out.print(arr[i] + " ");
+				}
+				System.out.print(arr[num - 1]);
+			} else {
+				Arrays.sort(arr, Collections.reverseOrder());
+				for (int i = 0; i < num - 1; i++) {
+					System.out.print(arr[i] + " ");
+				}
+				System.out.print(arr[num - 1]);
+			}
+		} else {
+			System.out.println("INVALID_INPUT");
+		}
+	}
 }

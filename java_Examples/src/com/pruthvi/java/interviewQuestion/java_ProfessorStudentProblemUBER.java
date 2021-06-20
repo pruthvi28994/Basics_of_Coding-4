@@ -1,4 +1,5 @@
-package java_Examples;
+package com.pruthvi.java.interviewQuestion;
+
 import java.util.*;
 
 /*
@@ -34,51 +35,52 @@ public class java_ProfessorStudentProblemUBER {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Identification number
-		Vector<Long> a=new Vector<>();
-		//Roll Number
-		Vector<Long> r=new Vector<>();
-		Scanner sc=new Scanner(System.in);
+		// Identification number
+		Vector<Long> a = new Vector<>();
+		// Roll Number
+		Vector<Long> r = new Vector<>();
+		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Number of Students");
-		int size=sc.nextInt();
-		
-		//enter the Identification number;
+		int size = sc.nextInt();
+
+		// enter the Identification number;
 		System.out.println("Enter the Identification Number");
-		for(int i=0;i<size;i++) {
+		for (int i = 0; i < size; i++) {
 			a.add(sc.nextLong());
 		}
 		System.out.println("Enter the Roll Number");
-		//enter the Roll Number
-		for(int i=0;i<size;i++) {
+		// enter the Roll Number
+		for (int i = 0; i < size; i++) {
 			r.add(sc.nextLong());
 		}
-		System.out.println("Minimum possible amount of the trip =>"+minPosibleTotal(a,r));
+		System.out.println("Minimum possible amount of the trip =>" + minPosibleTotal(a, r));
 	}
 
 	public static Long minPosibleTotal(Vector<Long> a, Vector<Long> r) {
-		 /*  	3
-		 * 		23	45	56
-		 * 		11	14	3
+		/*
+		 * 3 23 45 56 11 14 3
 		 * 
 		 * output ==>69+135=204 min value
 		 * 
 		 * 29,120,33,13,8,9
 		 */
-		Vector<Long> minValue=new Vector<Long>();
-		Long sum1=0L;
-		Long sum2=0L;
-		for(int i=0;i<r.size();i++) {
-			for(int j=0;j<r.size();j++) {
-				if(i==j)
+		Vector<Long> minValue = new Vector<Long>();
+		Long sum1 = 0L;
+		Long sum2 = 0L;
+		for (int i = 0; i < r.size(); i++) {
+			for (int j = 0; j < r.size(); j++) {
+				if (i == j)
 					continue;
 				else {
-					sum1+=(r.get(i)*a.get(j));   //because it is given that either way the student can be interchanged i.e a[p]*r[q] or a[q]*r[p]
-					sum2+=(r.get(j)*a.get(i));
+					sum1 += (r.get(i) * a.get(j)); // because it is given that either way the student can be
+													// interchanged i.e a[p]*r[q] or a[q]*r[p]
+					sum2 += (r.get(j) * a.get(i));
 				}
 			}
 			minValue.add(sum1);
 			minValue.add(sum2);
-			sum1=0L;sum2=0L;
+			sum1 = 0L;
+			sum2 = 0L;
 		}
 //		System.out.println(minValue); just to show value stored in minValue;
 		return Collections.min(minValue);
