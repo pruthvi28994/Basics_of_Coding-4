@@ -11,12 +11,12 @@ public class java_StringtoDate {
 		Date date = new Date();
 		System.out.println(date);
 
-		// formatchange
+		// format change
 		DateFormat df = DateFormat.getDateInstance();
-		System.out.println(df.format(date));
+		System.out.println("Date Instance "+df.format(date));
 
 		df = DateFormat.getDateTimeInstance();
-		System.out.println(df.format(date));
+		System.out.println("Time Instance :"+df.format(date));
 
 		df = DateFormat.getDateInstance(DateFormat.LONG);
 		System.out.println("Long Format=>" + df.format(date));
@@ -35,15 +35,14 @@ public class java_StringtoDate {
 		sdf.setLenient(false);
 		System.out.println(sdf.format(date));
 
-		System.out.println("Enter the date of birth in DD-MM-YYYY format:");
+		System.out.println("Enter the date of birth in DD-MMMM-YYYY format:");
 		Scanner sc = new Scanner(System.in);
 		String input = sc.nextLine();
 		try {
 			date = sdf.parse(input);
 			System.out.println(date);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			System.err.println("Date should be in DD-MM-YYYY format");
+			System.err.println("Date should be in DD-MMMM-YYYY format");
 		}
 	}
 
