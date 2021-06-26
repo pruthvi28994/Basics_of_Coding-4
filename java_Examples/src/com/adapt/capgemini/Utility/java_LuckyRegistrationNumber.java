@@ -1,4 +1,4 @@
-package com.adapt.capgemini.StringBuilder;
+package com.adapt.capgemini.Utility;
 
 import java.util.*;
 import java.util.regex.Matcher;

@@ -1,4 +1,4 @@
-package com.adapt.capgemini.StringBuilder;
+package com.adapt.capgemini.Utility;
 /*
 	Create a class AgeCalculator with the following public method:
 		calculateAge(String):int[]

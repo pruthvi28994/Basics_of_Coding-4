@@ -1,4 +1,4 @@
-package com.adapt.capgemini.StringBuilder;
+package com.adapt.capgemini.Utility;
 
 public class java_StringBuilderEx1 {
 

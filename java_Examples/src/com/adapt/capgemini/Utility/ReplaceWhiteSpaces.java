@@ -1,6 +1,6 @@
-package com.adapt.capgemini.StringBuilder;
+package com.adapt.capgemini.Utility;
 import java.util.*;
-public class demo {
+public class ReplaceWhiteSpaces {
 	public static void main(String[] args) {
 	    Scanner sc=new Scanner(System.in);
 		String str=sc.nextLine();

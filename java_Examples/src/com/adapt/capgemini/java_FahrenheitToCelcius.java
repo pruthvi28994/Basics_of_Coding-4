@@ -2,7 +2,7 @@ package com.adapt.capgemini;
 
 import java.util.*;
 
-class Utility {
+class Utilities {
 	public static int fahrenheitToCelcius(double farhenheit) {
 		return (int) Math.round((farhenheit - 32) * 5 / 9);
 
@@ -31,7 +31,7 @@ public class java_FahrenheitToCelcius {
 		int choice = sc.nextInt();
 		switch (choice) {
 		case 1:
-			System.out.println(Utility.fahrenheitToCelcius(sc.nextInt()));
+			System.out.println(Utilities.fahrenheitToCelcius(sc.nextInt()));
 			break;
 		case 2:
 			int size = sc.nextInt();
@@ -39,7 +39,7 @@ public class java_FahrenheitToCelcius {
 			for (int i = 0; i < size; i++) {
 				a[i] = sc.nextInt();
 			}
-			System.out.println(Utility.getLevel(a));
+			System.out.println(Utilities.getLevel(a));
 			break;
 		default:
 			System.out.println("INVALID_OPTION");
