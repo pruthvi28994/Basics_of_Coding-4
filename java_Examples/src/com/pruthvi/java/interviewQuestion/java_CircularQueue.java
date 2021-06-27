@@ -49,20 +49,21 @@ class CirularQueue {
 
 public class java_CircularQueue {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Size of Element");
-		CirularQueue queue = new CirularQueue(sc.nextInt());
-		System.out.println("Enter the elements");
-		for (int i = 0; i < queue.MAX_SIZE; i++) {
-			queue.Enqueue(sc.nextInt());
-		}
+		try (// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the Size of Element");
+			CirularQueue queue = new CirularQueue(sc.nextInt());
+			System.out.println("Enter the elements");
+			for (int i = 0; i < queue.MAX_SIZE; i++) {
+				queue.Enqueue(sc.nextInt());
+			}
 //		queue.Enqueue(90);
-		queue.display();
-		queue.Dequeue();
-		queue.Dequeue();
-		queue.Dequeue();
+			queue.display();
+			queue.Dequeue();
+			queue.Dequeue();
+			queue.Dequeue();
 //		queue.Enqueue(91);
-		queue.display();
+			queue.display();
+		}
 	}
 }

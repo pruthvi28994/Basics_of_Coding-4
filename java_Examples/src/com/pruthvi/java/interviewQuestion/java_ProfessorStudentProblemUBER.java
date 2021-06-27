@@ -39,19 +39,20 @@ public class java_ProfessorStudentProblemUBER {
 		Vector<Long> a = new Vector<>();
 		// Roll Number
 		Vector<Long> r = new Vector<>();
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Number of Students");
-		int size = sc.nextInt();
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the Number of Students");
+			int size = sc.nextInt();
 
-		// enter the Identification number;
-		System.out.println("Enter the Identification Number");
-		for (int i = 0; i < size; i++) {
-			a.add(sc.nextLong());
-		}
-		System.out.println("Enter the Roll Number");
-		// enter the Roll Number
-		for (int i = 0; i < size; i++) {
-			r.add(sc.nextLong());
+			// enter the Identification number;
+			System.out.println("Enter the Identification Number");
+			for (int i = 0; i < size; i++) {
+				a.add(sc.nextLong());
+			}
+			System.out.println("Enter the Roll Number");
+			// enter the Roll Number
+			for (int i = 0; i < size; i++) {
+				r.add(sc.nextLong());
+			}
 		}
 		System.out.println("Minimum possible amount of the trip =>" + minPosibleTotal(a, r));
 	}

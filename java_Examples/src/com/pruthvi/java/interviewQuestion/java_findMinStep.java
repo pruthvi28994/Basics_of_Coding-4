@@ -1,8 +1,8 @@
 package com.pruthvi.java.interviewQuestion;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class java_Accenture {
+public class java_findMinStep {
 
 	/*
 	 * if the given steps number is even you are allowed to jump n/2 below at
@@ -10,8 +10,14 @@ public class java_Accenture {
 	 * the min number of steps required to win this game from the given input
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(minStep(20));
+		try (
+		Scanner sc = new Scanner(System.in)) {
+			int num=0;
+			while(sc.hasNext()) {
+				num=sc.nextInt();
+				System.out.println("Min steps required:"+minStep(num));
+			}
+		}
 
 	}
 

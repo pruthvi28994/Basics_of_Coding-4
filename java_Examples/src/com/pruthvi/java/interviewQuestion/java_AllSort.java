@@ -1,8 +1,6 @@
 package com.pruthvi.java.interviewQuestion;
 
-import java.util.Scanner;
-
-import com.pruthvi.java.interviewQuestion.java_SearchingTech;
+import java.util.*;
 
 public class java_AllSort {
 
@@ -39,7 +37,6 @@ public class java_AllSort {
 	}
 
 	void Bubble_Sort() {
-		int temp;
 		search.insert();
 		for (int i = 0; i < search.MAX_SIZE - 1; i++) {
 			for (int j = 0; j < search.MAX_SIZE - i - 1; j++) {

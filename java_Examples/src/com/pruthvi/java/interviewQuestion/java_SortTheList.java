@@ -33,9 +33,10 @@ public class java_SortTheList {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		System.out.println(sort(sc.nextLine()));
+		try (// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			System.out.println(sort(sc.nextLine()));
+		}
 	}
 
 }

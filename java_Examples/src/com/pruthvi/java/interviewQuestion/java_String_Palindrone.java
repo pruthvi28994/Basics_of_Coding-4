@@ -5,15 +5,16 @@ import java.util.Scanner;
 public class java_String_Palindrone {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the String to check palindrone");
-		String name = sc.nextLine();
-		boolean result = check_Panlindrome(name);
-		if (result) {
-			System.out.println("Given String '" + name + "' is palindrone");
-		} else {
-			System.out.println("Given String '" + name + "' is not palindrone");
+		try (// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the String to check palindrone");
+			String name = sc.nextLine();
+			boolean result = check_Panlindrome(name);
+			if (result) {
+				System.out.println("Given String '" + name + "' is palindrone");
+			} else {
+				System.out.println("Given String '" + name + "' is not palindrone");
+			}
 		}
 
 	}

@@ -1,16 +1,13 @@
 package com.pruthvi.java.interviewQuestion;
 
 import java.util.Scanner;
-
-import com.pruthvi.java.interviewQuestion.java_PrimeCheck;
-
 public class java_sumPrimeFactors {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number:");
-		System.out.println("Sum of Prime factors of number is " + sumPrimeFactors(sc.nextInt()));
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the number:");
+			System.out.println("Sum of Prime factors of number is " + sumPrimeFactors(sc.nextInt()));
+		}
 
 	}
 

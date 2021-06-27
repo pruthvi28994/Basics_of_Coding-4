@@ -66,17 +66,18 @@ public class java_SearchingTech {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Size of the array");
-		java_SearchingTech search = new java_SearchingTech(sc.nextInt());
+		try (// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the Size of the array");
+			java_SearchingTech search = new java_SearchingTech(sc.nextInt());
 
-		System.out.println("Enter the array elements");
-		search.insert();
-		System.out.println("Enter element to Search using Binary Search");
-		search.result_check(search.Binary_Search(search.sc.nextInt()));
-		System.out.println("Enter element to Search using Linear Search");
-		search.result_check(search.Linear_Search(search.sc.nextInt()));
+			System.out.println("Enter the array elements");
+			search.insert();
+			System.out.println("Enter element to Search using Binary Search");
+			search.result_check(search.Binary_Search(search.sc.nextInt()));
+			System.out.println("Enter element to Search using Linear Search");
+			search.result_check(search.Linear_Search(search.sc.nextInt()));
+		}
 		System.out.println();
 	}
 

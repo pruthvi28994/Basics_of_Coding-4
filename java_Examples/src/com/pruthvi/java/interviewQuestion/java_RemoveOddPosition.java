@@ -10,16 +10,17 @@ import java.util.*;
 
 public class java_RemoveOddPosition {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		Vector<Integer> arr = new Vector<>();
-		System.out.println("Enter the size");
-		int size = sc.nextInt();
-		System.out.println("Enter the elements");
-		for (int i = 0; i < size; i++) {
-			arr.add(sc.nextInt());
+		try (// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in)) {
+			Vector<Integer> arr = new Vector<>();
+			System.out.println("Enter the size");
+			int size = sc.nextInt();
+			System.out.println("Enter the elements");
+			for (int i = 0; i < size; i++) {
+				arr.add(sc.nextInt());
+			}
+			removeoddpos(arr);
 		}
-		removeoddpos(arr);
 
 	}
 

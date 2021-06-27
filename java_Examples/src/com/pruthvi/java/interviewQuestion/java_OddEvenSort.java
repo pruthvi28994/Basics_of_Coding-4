@@ -11,29 +11,29 @@ import java.util.*;
 
 public class java_OddEvenSort {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		if (num > 1 && num <= 20) {
-			Integer arr[] = new Integer[num];
-			for (int i = 0; i < num; i++) {
-				arr[i] = sc.nextInt();
-			}
-			int temp;
-			if (num % 2 == 0) {
-				Arrays.sort(arr);
-				for (int i = 0; i < num - 1; i++) {
-					System.out.print(arr[i] + " ");
+		try (Scanner sc = new Scanner(System.in)) {
+			int num = sc.nextInt();
+			if (num > 1 && num <= 20) {
+				Integer arr[] = new Integer[num];
+				for (int i = 0; i < num; i++) {
+					arr[i] = sc.nextInt();
 				}
-				System.out.print(arr[num - 1]);
+				if (num % 2 == 0) {
+					Arrays.sort(arr);
+					for (int i = 0; i < num - 1; i++) {
+						System.out.print(arr[i] + " ");
+					}
+					System.out.print(arr[num - 1]);
+				} else {
+					Arrays.sort(arr, Collections.reverseOrder());
+					for (int i = 0; i < num - 1; i++) {
+						System.out.print(arr[i] + " ");
+					}
+					System.out.print(arr[num - 1]);
+				}
 			} else {
-				Arrays.sort(arr, Collections.reverseOrder());
-				for (int i = 0; i < num - 1; i++) {
-					System.out.print(arr[i] + " ");
-				}
-				System.out.print(arr[num - 1]);
+				System.out.println("INVALID_INPUT");
 			}
-		} else {
-			System.out.println("INVALID_INPUT");
 		}
 	}
 }

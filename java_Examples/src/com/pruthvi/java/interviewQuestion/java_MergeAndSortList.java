@@ -30,25 +30,26 @@ import java.util.*;
 public class java_MergeAndSortList {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		List<Integer> list1 = new ArrayList<Integer>();
-		System.out.println("Enter the first List Elements");
-		for (int i = 0; i < 5; i++) {
-			if (sc.hasNextLine())
-				list1.add(sc.nextInt());
-			else
-				throw new IllegalArgumentException();
+		try (Scanner sc = new Scanner(System.in)) {
+			List<Integer> list1 = new ArrayList<Integer>();
+			System.out.println("Enter the first List Elements");
+			for (int i = 0; i < 5; i++) {
+				if (sc.hasNextLine())
+					list1.add(sc.nextInt());
+				else
+					throw new IllegalArgumentException();
+			}
+			System.out.println("Enter the Second List Elements");
+			List<Integer> list2 = new ArrayList<Integer>();
+			for (int i = 0; i < 5; i++) {
+				if (sc.hasNextLine())
+					list2.add(sc.nextInt());
+				else
+					throw new IllegalArgumentException();
+			}
+			System.out
+					.println("After mergining and sorting the list(2,6,8) indexed position\n" + mergeAndSort(list1, list2));
 		}
-		System.out.println("Enter the Second List Elements");
-		List<Integer> list2 = new ArrayList<Integer>();
-		for (int i = 0; i < 5; i++) {
-			if (sc.hasNextLine())
-				list2.add(sc.nextInt());
-			else
-				throw new IllegalArgumentException();
-		}
-		System.out
-				.println("After mergining and sorting the list(2,6,8) indexed position\n" + mergeAndSort(list1, list2));
 	}
 
 	public static List<Integer> mergeAndSort(List<Integer> al1, List<Integer> al2) {

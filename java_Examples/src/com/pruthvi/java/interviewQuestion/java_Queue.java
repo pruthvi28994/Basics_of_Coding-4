@@ -18,20 +18,21 @@ public class java_Queue {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		java_Queue queue = new java_Queue();
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Size of the queue");
-		queue.maxsize = sc.nextInt();
-		int Q[] = new int[queue.maxsize];
-		System.out.println();
-		System.out.println("Enter the elements:");
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter the Size of the queue");
+			queue.maxsize = sc.nextInt();
+			int Q[] = new int[queue.maxsize];
+			System.out.println();
+			System.out.println("Enter the elements:");
 
-		for (int i = 0; i <= queue.maxsize; i++) {
-			queue.insert(sc.nextInt());
+			for (int i = 0; i <= queue.maxsize; i++) {
+				queue.insert(sc.nextInt());
+			}
+			for (int i = 0; i <= queue.maxsize; i++) {
+				queue.delete();
+			}
+			System.out.println(Q[1]);
 		}
-		for (int i = 0; i <= queue.maxsize; i++) {
-			queue.delete();
-		}
-		System.out.println(Q[1]);
 	}
 
 	void insert(int element) {

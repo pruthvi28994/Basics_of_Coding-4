@@ -35,22 +35,26 @@ public class java_SumOfListElements {
 	public static void main(String[] args) {
 		List<Integer> list1 = new ArrayList<>();
 		List<Integer> list2 = new ArrayList<>();
-		Scanner sc = new Scanner(System.in);
+		try (Scanner sc = new Scanner(System.in)) {
+			// accepting the input in the form of string
+			String s1 = sc.nextLine();
+			s1 = s1.substring(1, s1.length() - 1);
+			String input1[] = s1.split(",");
+			for (int i = 0; i < input1.length; i++) {
+				list1.add(Integer.parseInt(input1[i]));
+			}
 
-		// accepting the input in the form of string
-		String s1 = sc.nextLine();
-		s1 = s1.substring(1, s1.length() - 1);
-		String input1[] = s1.split(",");
-		for (int i = 0; i < input1.length; i++) {
-			list1.add(Integer.parseInt(input1[i]));
+			String s2 = sc.nextLine();
+			s2 = s2.substring(1, s2.length() - 1);
+			String input2[] = s2.split(",");
+			for (int i = 0; i < input2.length; i++) {
+				list2.add(Integer.parseInt(input2[i]));
+			}
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
-		String s2 = sc.nextLine();
-		s2 = s2.substring(1, s2.length() - 1);
-		String input2[] = s2.split(",");
-		for (int i = 0; i < input2.length; i++) {
-			list2.add(Integer.parseInt(input2[i]));
-		}
 		System.out.println(getSumOfListElements(list1, list2));
 	}
 }
