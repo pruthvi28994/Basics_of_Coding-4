@@ -1,0 +1,3 @@
+Writing the data using Buffered Writer
+My name Is Pruthvi Sagar S
+Price of 1Kg Apple , 23.56

@@ -2,10 +2,7 @@ package com.adapt.capgemini.Utility;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
 
 
 
@@ -30,10 +27,9 @@ class Utilities{
 		String pattern3="^(0[1-9]|[12][0-9]|3[01]).(1[0-2]|0[1-9]).[0-9]{4}$";
 		String pattern2="^(0[1-9]|[12][0-9]|3[01])-(1[0-2]|0[1-9])-[0-9]{4}$";
 		//matching the string via string.matches(regex);
-		Date d;
 		if(date.matches(pattern1)) {
 			try {
-				d=sdf1.parse(date);
+				Date d=sdf1.parse(date);
 				return 1;
 			} catch (ParseException e) {
 				return -1;
@@ -41,7 +37,7 @@ class Utilities{
 		}
 		if(date.matches(pattern2)) {
 			try {
-				d=sdf2.parse(date);
+				Date d=sdf2.parse(date);
 				return 1;
 			} catch (ParseException e) {
 				return -1;
@@ -49,7 +45,7 @@ class Utilities{
 		}
 		if(date.matches(pattern3)) {
 			try {
-				d=sdf3.parse(date);
+				Date d=sdf3.parse(date);
 				return 1;
 			} catch (ParseException e) {
 				return -1;
@@ -81,6 +77,7 @@ public class java_DateValidation {
 			System.out.println("Valid");
 		else 
 			System.out.println("Invalid");
+		sc.close();
 	}
-
+		
 }

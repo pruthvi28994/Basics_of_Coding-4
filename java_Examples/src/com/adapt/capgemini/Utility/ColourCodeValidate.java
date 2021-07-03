@@ -30,7 +30,7 @@ public class ColourCodeValidate {
 			System.out.println("Invalid Choice");
 
 		}
-
+		sc.close();
 	}
 
 	public static int validateHexCode(String code) {

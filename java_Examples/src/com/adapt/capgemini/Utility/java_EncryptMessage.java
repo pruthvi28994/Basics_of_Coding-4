@@ -9,6 +9,7 @@ public class java_EncryptMessage {
 		String string=sc.nextLine();
 		String result=encrypt(string);
 		System.out.println(result);
+		sc.close();
 	}
 
 	public static String encrypt(String string) {

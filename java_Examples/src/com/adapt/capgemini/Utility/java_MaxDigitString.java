@@ -12,6 +12,7 @@ public class java_MaxDigitString {
 			System.out.println(result);
 		else
 			System.out.println("No digits in String");
+		sc.close();
 	}
 	public static int getMaxDigit(String input) {
 		int MAX=Integer.MIN_VALUE;

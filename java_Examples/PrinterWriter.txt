@@ -1,0 +1,6 @@
+Hello Writing data using PrintWriter
+my age is 23
+Address: Mysore,K R Nagar Taluk , 27.05.2021
+
+SSLC:true
+Myself Pruthvi Sagar S stays in Banglore

@@ -11,7 +11,7 @@ public class java_DayOfDate {
 		System.out.println("Enter the Date");
 		String date=sc.next();
 		System.out.println(getDayOfDate(date));
-
+		sc.close();
 	}
 	public static String getDayOfDate(String date) {
 		//accepting the string in given format dd/MM/yyyy

@@ -26,7 +26,7 @@ class AgeCalculator{
 		int arr[] = new int[2];
 		String input[]=date.split("/");
 		int month=Integer.parseInt(input[1]);
-		int days=Integer.parseInt(input[0]);
+		//int days=Integer.parseInt(input[0]);
 		int years=Integer.parseInt(input[2]);
 		
 		if((years == 2019 && month <=3) || (years<=2018)) {
@@ -45,32 +45,34 @@ public class java_CalculateAge {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		String date=sc.next();
-		AgeCalculator ca=new AgeCalculator();
-		int arr[]=ca.calculateAge(date);
+		int arr[]=AgeCalculator.calculateAge(date);
 		if(arr!=null) {
 			if (arr[0] != 0 && arr[1] != 0) 
 	          {
 	              System.out.println("Years : " + arr[0] + ", Months : " + arr[1]);
-	              return;
+	              extracted();
 	          }
 	          
 	          if (arr[0] == 0 && arr[1] != 0) 
 	          {
 	              System.out.println("Months : " + arr[1]);
-	              return;
+	              extracted();
 	          }
 	          
 	          if (arr[0] != 0 && arr[1] == 0)
 	          {
 	              System.out.println("Years : " + arr[0]);
-	              return;
+	              extracted();
 	          }
 		}
 		else {
 			System.out.println("Invalid Date of birth");
 		}
 		
+		sc.close();
+	}
 
+	private static void extracted() {
 	}
 
 }

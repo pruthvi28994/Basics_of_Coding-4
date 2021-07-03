@@ -44,6 +44,9 @@ public class java_StringtoDate {
 		} catch (ParseException e) {
 			System.err.println("Date should be in DD-MMMM-YYYY format");
 		}
+		
+		
+		sc.close();
 	}
 
 }

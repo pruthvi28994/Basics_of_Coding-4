@@ -22,6 +22,8 @@ public class java_RegularExpression {
 		details = m2.replaceAll(usn);
 		System.out.println(details);
 		
+		
+		sc.close();
 	}
 
 }

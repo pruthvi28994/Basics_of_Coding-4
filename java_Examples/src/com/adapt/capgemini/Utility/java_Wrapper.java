@@ -29,17 +29,18 @@ public class java_Wrapper {
 		char s = ' ';
 		System.out.println("isWhiteSpace()=>" + Character.isWhitespace(s));
 
-		double d1 = 120.34d;
 		System.out.println(Double.MAX_VALUE);
 
 		// Auto-Boxing and Auto-Unboxing
 		// boxing
+		@SuppressWarnings("deprecation")
 		Integer n = new Integer(10);
 		System.out.println(n);
 		// unboxing
 		int ubox = n;
 		System.out.println(ubox);
 
+		
 	}
 
 }

@@ -12,6 +12,7 @@ public class java_CountUniqueCharacters {
 			System.out.println(result+" unique character/s");
 		else
 			System.out.println("No unique character/s");
+		sc.close();
 	}
 
 	public static int getUniqueCharacterCount(String string) {

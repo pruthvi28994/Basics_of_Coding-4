@@ -32,6 +32,7 @@ public class java_LuckyRegistrationNumber {
 		}
 		else
 			System.out.println("Invalid registration number");
+		sc.close();
 
 	}
 	public static int checkRegistrationNumber(String number) {

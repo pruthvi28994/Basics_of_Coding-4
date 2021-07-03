@@ -2,9 +2,10 @@ package com.adapt.capgemini.Utility;
 import java.util.*;
 public class ReplaceWhiteSpaces {
 	public static void main(String[] args) {
-	    Scanner sc=new Scanner(System.in);
-		String str=sc.nextLine();
-		str = str.replaceAll("\\s","");
-		System.out.println(str);
+	    try (Scanner sc = new Scanner(System.in)) {
+			String str=sc.nextLine();
+			str = str.replaceAll("\\s","");
+			System.out.println(str);
+		}
 	}
 }
